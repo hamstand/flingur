@@ -1,9 +1,8 @@
 
 
-var flickrURL = "http://www.flickr.com/services/rest/?method=flickr.interestingness.getList&format=json&api_key=383d6452806c5b782b87e4ff292d20e7&nojsoncallback=1&per_page=50&page=1";
-	
+var flickrURL = "http://www.flickr.com/services/rest/?method=flickr.interestingness.getList&format=json&api_key=237092eefc192e84aa7c30e357ad64bf&nojsoncallback=1&per_page=50&page=1&geo=1&tags=1";
 
-function photoCtrl($scope, $http) {
+function photoPickerCtrl($scope, $http) {
 	//use local till we sort out x-domain
 	$http.get("js/flickr1.json").success(function(data) {
 		

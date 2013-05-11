@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
@@ -25,26 +25,27 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div role="banner">
+        <div class="header" role="banner">
             <h1>ffflingur v0.1 <small>BETA</small></h1>
         </div>
 
-        <div id="imgThumbs" ng-controller="photoCtrl">
-            <div>Page {{photos.page}} of {{photos.pages}}</div>
-            <ul>
-                <li ng-repeat="photo in photos.photo">
-                    <a href="#/photo/{{photo.id}}"><img ng-src="http://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_m.jpg" /></a>
-                </li>
-            </ul>
+        <div class="main" role="main">
+            <div id="imgThumbs" ng-controller="photoPickerCtrl">
+
+                <div class="controls">
+                    <p>Page {{photos.page}} of {{photos.pages}}</p>
+                    <p>Keyword / tag filter: <input ng-model="query" placeholder="e.g. cloud, nature etc"></p>
+                </div>
+                <ul>
+                    <li ng-repeat="photo in photos.photo | filter:query">
+                        <a href="#/photo/{{photo.id}}"><img ng-src="http://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_m.jpg" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="imgLarge">
+
+            </div>
         </div>
-
-        <div id="imgLarge">
-
-        </div>
-
-
-
-
-
     </body>
 </html>
