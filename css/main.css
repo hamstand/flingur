@@ -106,7 +106,7 @@ h1 {font-size:3rem;color:#555;margin:5px 0;padding:0;}
 h1 small {font-size:1rem;font-style:italic;}
 
 .main {width:100%;max-width:950px;margin:0 auto;height:85%;background:#ddd;}
-#imgThumbs {width:20%;float:left;height:100%;padding:5px 10px 5px 20px;border-right:1px solid #aaa;}
+#imgThumbs {width:20%;float:left;height:100%;padding:5px 15px 5px 15px;border-right:1px solid #aaa;}
 #imgThumbs input {width:100%;padding:0.3em;}
 #imgThumbs .controls {height:15%;}
 #imgThumbs ul {overflow-y:scroll;height:84%;}
@@ -117,9 +117,9 @@ h1 small {font-size:1rem;font-style:italic;}
 /*
 #imgThumbs img {border-radius:50%;border:5px solid #fff;box-shadow:0px 3px 3px #aaa;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
 #imgThumbs a:hover img {box-shadow:none;border:0px solid #fff;}*/
-#imgLarge {width:80%;height:100%;float:left;border-left:1px solid #eee;background:#111;text-align:center;}
-#imgLarge h3 {color:#eee;padding:10px 0;}
-#imgLarge img {padding:0px 20px;max-height:95%;margin:0 auto;}
+#imgLarge {width:80%;height:100%;float:left;border-left:1px solid #eee;text-align:center;padding:0px 15px;}
+#imgLarge h2 {padding:10px 0;}
+#imgLarge img {max-height:90%;margin:0 auto;}
 ::-webkit-scrollbar {
     width: 15px;
     background:#ddd;
