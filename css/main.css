@@ -94,31 +94,52 @@ textarea {
    ========================================================================== */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body, html {font-family: 'Lato', sans-serif;font-weight:400;width:100%;height:100%;font-size:100%;background:#eee;margin:0;padding:0;}
+body, html {font-family: 'Lato', sans-serif;font-weight:400;width:100%;height:100%;font-size:100%;background:#eee;color:#333;margin:0;padding:0;}
 
 img {max-width:100%;}
-h1,h2,h3,h4,h5,h6 {margin:0;padding:0;font-weight:300;font-weight:normal;}
+h1,h2,h3,h4,h5,h6 {margin:0;padding:0;font-weight:300;}
+label,input{font-size:0.8rem;}
+
 
 .header {background:#fff;padding:1rem;text-align:center;height:15%;}
-h1 {font-size:3rem;color:#555;margin:0;padding:0;}
+h1 {font-size:3rem;color:#555;margin:5px 0;padding:0;}
 h1 small {font-size:1rem;font-style:italic;}
 
-.main {width:100%;max-width:950px;margin:0 auto;height:85%;background:#ddd;padding:20px;}
-#imgThumbs {width:18%;float:left;height:100%;}
-#imgThumbs input {width:100%;font-size:0.9rem;padding:0.3em;}
+.main {width:100%;max-width:950px;margin:0 auto;height:85%;background:#ddd;}
+#imgThumbs {width:20%;float:left;height:100%;padding:5px 10px 5px 20px;border-right:1px solid #aaa;}
+#imgThumbs input {width:100%;padding:0.3em;}
 #imgThumbs .controls {height:15%;}
+#imgThumbs ul {overflow-y:scroll;height:84%;}
 #imgThumbs ul, #imgThumbs li {list-style-type:none;margin:0;padding:0;}
-#imgThumbs ul {overflow-y:scroll;height:85%;}
-#imgLarge {width:82%;height:100%;float:left;}
+#imgThumbs ul {padding-right:5px;}
+#imgThumbs li {margin-top:5px;}
+#imgThumbs li:first-child {margin-top:0px;}
+/*
+#imgThumbs img {border-radius:50%;border:5px solid #fff;box-shadow:0px 3px 3px #aaa;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+#imgThumbs a:hover img {box-shadow:none;border:0px solid #fff;}*/
+#imgLarge {width:80%;height:100%;float:left;border-left:1px solid #eee;background:#111;text-align:center;}
+#imgLarge h3 {color:#eee;padding:10px 0;}
+#imgLarge img {padding:0px 20px;max-height:95%;margin:0 auto;}
+::-webkit-scrollbar {
+    width: 15px;
+    background:#ddd;
+}
 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    border-radius: 2px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    margin:0px 2px;
+    background:#ccc;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+}
 
-
-
-
-
-
-
-
+::-webkit-scrollbar-thumb:hover {
+  background:#fff;
+}
 
 
 /* ==========================================================================
