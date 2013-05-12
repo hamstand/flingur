@@ -26,19 +26,33 @@
             <h1>ffflingur v0.1 <small>BETA</small></h1>
         </div>
 
-        <div class="main" role="main">
-            <div id="imgThumbs" ng-controller="photoPickerCtrl">
+        <div class="main" role="main" ng-controller="photoPickerCtrl">
+            <div id="imgThumbs">
 
                 <div class="controls">
                     <h3>Page {{photos.page}} of {{photos.pages}} </h3>
 
-                    <label for="filter">Keyword / tag filter:</label>
+                    <ul class="pageNav"> 
+                        <li ng-class="{disabled: currentPage == 1}">
+                            <a href ng-click="prevPage()">&lt; Prev</a>
+                        </li>
+                        <li ng-repeat="n in range(pages)" ng-class="{active: n == currentPage}" ng-click="setPage()">
+                            <a href ng-bind="n + 1">1</a>
+                        </li>
+                        <li ng-class="{disabled: currentPage == pages}">
+                            <a href ng-click="nextPage()">Next &gt;</a>
+                        </li>
+                    </ul>
+
+
+                    <label for="filter">Filter current page:</label>
                     <input ng-model="query" name="filter" id="filter" placeholder="e.g. cloud, nature etc"></p>
                     
+
                 </div>
                 <ul>
                     <li ng-repeat="photo in photos.photo | filter:query">
-                        <a href="#/photo/{{photo.id}}"><img ng-src="http://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_q.jpg" /></a>
+                        <a href="#/photo/{{photo.id}}" ng-click="viewPhoto(photo.id)"><img ng-src="http://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_q.jpg" /></a>
                     </li>
                 </ul>
             </div>
