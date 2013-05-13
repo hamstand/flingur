@@ -108,8 +108,8 @@ h1 small {font-size:1rem;font-style:italic;}
 .main {width:100%;max-width:950px;margin:0 auto;height:85%;background:#ddd;}
 #imgThumbs {width:20%;float:left;height:100%;padding:5px 15px 5px 15px;border-right:1px solid #aaa;}
 #imgThumbs input {width:100%;padding:0.3em;}
-#imgThumbs .controls {height:15%;}
-#imgThumbs ul {overflow-y:scroll;height:84%;}
+#imgThumbs .controls {height:20%;}
+#imgThumbs ul {overflow-y:scroll;height:79%;}
 #imgThumbs ul, #imgThumbs li {list-style-type:none;margin:0;padding:0;}
 #imgThumbs ul {padding-right:5px;}
 #imgThumbs li {margin-top:5px;}

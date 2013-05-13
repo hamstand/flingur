@@ -47,14 +47,14 @@
                     
 
                 </div>
-                <ul>
+                <ul><!-- ng-click="viewPhoto(photo.id)" -->
                     <li ng-repeat="photo in photos.photo | filter:query">
-                        <a href="#/photo/{{photo.id}}" ng-click="viewPhoto(photo.id)"><img ng-src="http://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_q.jpg" /></a>
+                        <a href="#/photo/{{photo.id}}" ><img ng-src="http://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_q.jpg" /></a>
                     </li>
                 </ul>
             </div>
 
-            <div id="imgLarge" ng-view>
+            <div id="imgLarge" ng-view ng-init="init()">
             </div>
         </div>
 

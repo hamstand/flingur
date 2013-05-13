@@ -1,4 +1,4 @@
-ffflingurApp.controller('PhotoPickerCtrl', function($scope, AllPhotos) {
+ffflingurApp.controller('PhotoPickerCtrl', function($scope, $routeParams, AllPhotos, SinglePhoto) {
     $scope.currentPage = 1;
 
     $scope.getPhotos = function () {
@@ -21,9 +21,11 @@ ffflingurApp.controller('PhotoPickerCtrl', function($scope, AllPhotos) {
             $scope.getPhotos();
         }
     }
-
+    
     $scope.getPhotos();
-}).controller('PhotoSelectedCtrl', function($scope, SinglePhoto, $routeParams) {
+ 
+})
+.controller('PhotoSelectedCtrl', function($scope, SinglePhoto, $routeParams) {
     var currPhoto = $routeParams.photoId;
     SinglePhoto.get({photoId: currPhoto},function(data){
         $scope.photo = data.photo;
