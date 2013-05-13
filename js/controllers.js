@@ -23,7 +23,7 @@ ffflingurApp.controller('PhotoPickerCtrl', function($scope, $routeParams, AllPho
     }
     
     $scope.getPhotos();
- 
+    
 })
 .controller('PhotoSelectedCtrl', function($scope, SinglePhoto, $routeParams) {
     var currPhoto = $routeParams.photoId;
@@ -32,3 +32,4 @@ ffflingurApp.controller('PhotoPickerCtrl', function($scope, $routeParams, AllPho
         $scope.imgURL = "http://farm"+$scope.photo.farm+".staticflickr.com/"+$scope.photo.server+"/"+$scope.photo.id+"_"+$scope.photo.secret+"_b.jpg";
     });
 });
+

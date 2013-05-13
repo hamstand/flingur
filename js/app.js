@@ -13,9 +13,7 @@ ffflingurApp.factory('AllPhotos', function($resource) {
         templateUrl: 'photo.html',
     })
     .otherwise({
-        redirectTo:'/',
-        controller: 'PhotoSelectedCtrl',
-        templateUrl: 'photo.html'
+        redirectTo:'/'
     });
 });
 
